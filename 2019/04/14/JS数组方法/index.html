@@ -16,12 +16,10 @@
 <meta property="og:site_name" content="阿不思的个人博客">
 <meta property="og:description" content="JS数组方法在实际应用中JS数组方法使用很多对他的熟悉直接关系到代码质量的高低">
 <meta property="og:locale" content="cn">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0069osmDly1g22hvqcnm1j30ko0e6tc0.jpg">
-<meta property="og:updated_time" content="2019-04-14T13:51:12.662Z">
+<meta property="og:updated_time" content="2019-04-15T02:49:04.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS数组方法">
 <meta name="twitter:description" content="JS数组方法在实际应用中JS数组方法使用很多对他的熟悉直接关系到代码质量的高低">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0069osmDly1g22hvqcnm1j30ko0e6tc0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="阿不思的个人博客" type="application/atom+xml">
   
@@ -163,7 +161,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://ww1.sinaimg.cn/large/0069osmDly1g22hvqcnm1j30ko0e6tc0.jpg" width="350px"></p>
+        <!--<img src="http://ww1.sinaimg.cn/large/0069osmDly1g22hvqcnm1j30ko0e6tc0.jpg" width="350px"/>-->
 <h1 id="JS数组方法"><a href="#JS数组方法" class="headerlink" title="JS数组方法"></a>JS数组方法</h1><p>在实际应用中<br>JS数组方法使用很多<br>对他的熟悉<br>直接关系到代码质量的高低<br><a id="more"></a></p>
 <p>在浏览器调试工具中新建一个数组对象，并打印它的隐形原型，即可得到关于Array对象底下的所有方法</p>
 <blockquote>
@@ -175,6 +173,10 @@
 <p>请创建一个长度为100，值都为1的数组</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">漂亮的正解：</span><br><span class="line">new Array(100).fill(1)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>请创建一个长度为100，值为对应下标的数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">漂亮的正解：</span><br><span class="line">Array(100).join(&quot;,&quot;).split(&quot;,&quot;).map(function(key,index)&#123;return index;&#125;)</span><br><span class="line">[...Array(100).keys()]</span><br></pre></td></tr></table></figure>
 <p>为了能写出这样简洁的代码，我把Array对象地下的所有方法都打印了出来，用来学习。</p>
 <h3 id="二、数组方法"><a href="#二、数组方法" class="headerlink" title="二、数组方法"></a>二、数组方法</h3><h5 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h5><blockquote>
 <p>创建并返回一个由多个数组拼接而成的数组，该方法不会改变原有数组</p>
