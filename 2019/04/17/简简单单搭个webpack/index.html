@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>AJAX CORS通信 | 阿不思的个人博客</title>
+  <title>简简单单搭个webpack | 阿不思的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CORS通信CORS是一个W3C标准全称是“跨域资源共享”（Cross-origin resource sharing）它允许浏览器向跨源服务器发出XMLHttpRequest请求从而克服了AJAX只能同源使用的限制">
-<meta name="keywords" content="JavaScript,浏览器,AJAX">
+  <meta name="description" content="webpack作为一个打包工具常结合Vue、React等前端框架使用所以对他的了解显得十分重要">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AJAX CORS通信">
-<meta property="og:url" content="http://yoursite.com/2018/03/05/AJAX-CORS通信/index.html">
+<meta property="og:title" content="简简单单搭个webpack">
+<meta property="og:url" content="http://yoursite.com/2019/04/17/简简单单搭个webpack/index.html">
 <meta property="og:site_name" content="阿不思的个人博客">
-<meta property="og:description" content="CORS通信CORS是一个W3C标准全称是“跨域资源共享”（Cross-origin resource sharing）它允许浏览器向跨源服务器发出XMLHttpRequest请求从而克服了AJAX只能同源使用的限制">
+<meta property="og:description" content="webpack作为一个打包工具常结合Vue、React等前端框架使用所以对他的了解显得十分重要">
 <meta property="og:locale" content="cn">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0069osmDgy1foq839p8f9j309q09q748.jpg">
-<meta property="og:updated_time" content="2018-07-23T06:17:06.000Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0069osmDly1g260bwzazlj30hm0eq0tb.jpg">
+<meta property="og:updated_time" content="2019-04-17T14:40:01.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AJAX CORS通信">
-<meta name="twitter:description" content="CORS通信CORS是一个W3C标准全称是“跨域资源共享”（Cross-origin resource sharing）它允许浏览器向跨源服务器发出XMLHttpRequest请求从而克服了AJAX只能同源使用的限制">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0069osmDgy1foq839p8f9j309q09q748.jpg">
+<meta name="twitter:title" content="简简单单搭个webpack">
+<meta name="twitter:description" content="webpack作为一个打包工具常结合Vue、React等前端框架使用所以对他的了解显得十分重要">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0069osmDly1g260bwzazlj30hm0eq0tb.jpg">
   
     <link rel="alternative" href="/atom.xml" title="阿不思的个人博客" type="application/atom+xml">
   
@@ -143,72 +143,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AJAX-CORS通信" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-简简单单搭个webpack" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      AJAX CORS通信
+      简简单单搭个webpack
     </h1>
   
 
         
-        <a href="/2018/03/05/AJAX-CORS通信/" class="archive-article-date">
-  	<time datetime="2018-03-05T09:48:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
+        <a href="/2019/04/17/简简单单搭个webpack/" class="archive-article-date">
+  	<time datetime="2019-04-17T14:16:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://ww1.sinaimg.cn/large/0069osmDgy1foq839p8f9j309q09q748.jpg" alt="JS"></p>
-<h1 id="CORS通信"><a href="#CORS通信" class="headerlink" title="CORS通信"></a>CORS通信</h1><p>CORS是一个W3C标准<br>全称是“跨域资源共享”（Cross-origin resource sharing）<br>它允许浏览器向跨源服务器<br>发出XMLHttpRequest请求<br>从而克服了AJAX只能同源使用的限制<br><a id="more"></a></p>
-<h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><p><strong>CORS 需要 浏览器 和 服务器 同时支持</strong>。目前，<strong>所有浏览器都支持该功能，IE浏览器不能低于IE10</strong> 。</p>
-<p>整个 <strong>CORS</strong> 通信过程，都是 <strong>浏览器自动完成</strong> ，不需要用户参与。对于开发者来说，<strong>CORS通信与同源的AJAX通信没有差别，代码完全一样</strong> 。浏览器一旦发现 <strong>AJAX请求跨源</strong> ，就会自动添加一些 <strong>附加的头信息</strong> ，有时还会多出一次附加的请求，但用户不会有感觉。</p>
-<p>因此，<strong>实现CORS通信的关键是服务器</strong> 。只要服务器实现了CORS接口，就可以跨源通信。</p>
-<h2 id="2、两种请求"><a href="#2、两种请求" class="headerlink" title="2、两种请求"></a>2、两种请求</h2><p>浏览器将 <strong>CORS</strong> 请求分成两类：<strong>简单请求（simple request）</strong>和 <strong>非简单请求（not-so-simple request）</strong>。</p>
-<p>只要 <strong>同时满足</strong> 以下两大条件，就属于 <strong>简单请求</strong> 。</p>
-<p>（1）请求方法是以下三种方法之一。</p>
-<blockquote>
-<ul>
-<li>HEAD</li>
-<li>GET</li>
-<li>POST</li>
-</ul>
-</blockquote>
-<p>（2）HTTP的头信息不超出以下几种字段。</p>
-<blockquote>
-<ul>
-<li>Accept</li>
-<li>Accept-Language</li>
-<li>Content-Language</li>
-<li>Last-Event-ID</li>
-<li>Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
-</ul>
-</blockquote>
-<p>凡是 <strong>不同时满足</strong> 上面两个条件，就属于 <strong>非简单请求</strong> 。</p>
-<p>浏览器对这两种请求的处理，是不一样的。</p>
-<h2 id="3、简单请求"><a href="#3、简单请求" class="headerlink" title="3、简单请求"></a>3、简单请求</h2><h3 id="3-1-基本流程"><a href="#3-1-基本流程" class="headerlink" title="3.1 基本流程"></a>3.1 基本流程</h3><p>对于 <strong>简单请求，浏览器直接发出CORS请求</strong> 。具体来说，就是 <strong>在头信息之中，增加一个 Origin 字段</strong> 。</p>
-<p>下面是一个例子，浏览器发现这次跨源AJAX请求是简单请求，就自动在头信息之中，添加一个Origin字段。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET /cors HTTP/1.1</span><br><span class="line">Origin: http://api.bob.com</span><br><span class="line">Host: api.alice.com</span><br><span class="line">Accept-Language: en-US</span><br><span class="line">Connection: keep-alive</span><br><span class="line">User-Agent: Mozilla/5.0...</span><br></pre></td></tr></table></figure>
-<p>上面的头信息中，<strong>Origin</strong> 字段用来说明，本次请求来自 <strong>哪个源（协议 + 域名 + 端口）</strong>。服务器根据这个值，决定是否同意这次请求。</p>
-<p>如果 <strong>Origin指定的源</strong> ，不在许可范围内，服务器会返回一个正常的HTTP回应。浏览器发现，这个回应的头信息没有包含Access-Control-Allow-Origin字段（详见下文），就知道出错了，从而抛出一个错误，被XMLHttpRequest的onerror回调函数捕获。注意，<strong>这种错误无法通过状态码识别</strong> ，因为HTTP回应的状态码有可能是200。</p>
-<p>如果 <strong>Origin</strong> 指定的域名在 <strong>许可范围内</strong> ，服务器返回的响应，会 <strong>多出几个头信息字段</strong> 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: http://api.bob.com</span><br><span class="line">Access-Control-Allow-Credentials: true</span><br><span class="line">Access-Control-Expose-Headers: FooBar</span><br><span class="line">Content-Type: text/html; charset=utf-8</span><br></pre></td></tr></table></figure>
-<p>上面的头信息之中，有三个与 <strong>CORS请求相关的字段</strong> ，都 <strong>以 Access-Control- 开头</strong> 。</p>
-<p>（1）Access-Control-Allow-Origin</p>
-<p><strong>该字段是必须的</strong> 。<strong>它的值要么是请求时Origin字段的值，要么是一个*，表示接受任意域名的请求</strong> 。</p>
-<p>（2）Access-Control-Allow-Credentials</p>
-<p><strong>该字段可选</strong> 。它的值是一个布尔值，表示 <strong>是否允许发送Cookie</strong> 。默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为true，如果服务器不要浏览器发送Cookie，删除该字段即可。</p>
-<p>（3）Access-Control-Expose-Headers</p>
-<p><strong>该字段可选</strong> 。CORS请求时，XMLHttpRequest对象的getResponseHeader()方法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。上面的例子指定，getResponseHeader(‘FooBar’)可以返回FooBar字段的值。</p>
-<p>……</p>
-<p>(略)</p>
-<h2 id="2、与JSONP的比较"><a href="#2、与JSONP的比较" class="headerlink" title="2、与JSONP的比较"></a>2、与JSONP的比较</h2><p><strong>CORS</strong> 与 <strong>JSONP</strong> 的使用目的相同，但是比JSONP更强大。</p>
-<p><strong>JSONP只支持GET请求，CORS支持所有类型的HTTP请求</strong> 。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p>[1] CORS通信，<a href="http://javascript.ruanyifeng.com/bom/cors.html" target="_blank" rel="noopener">《JavaScript 标准参考教程（alpha）》阮一峰</a></p>
+        <p><img src="http://ww1.sinaimg.cn/large/0069osmDly1g260bwzazlj30hm0eq0tb.jpg" width="350px"></p>
+<h1 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h1><p>作为一个打包工具<br>常结合Vue、React等前端框架使用<br>所以对他的了解<br>显得十分重要<br><a id="more"></a></p>
+<h3 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h3><p>首先我们30s搭建一个能打包的webpack出来</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建目录</span></span><br><span class="line">mkdir webpack &amp;&amp; cd webpack</span><br><span class="line"></span><br><span class="line"><span class="comment">// 快速创建package.json</span></span><br><span class="line">yarn init -y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 安装webpack</span></span><br><span class="line">yarn add webpack webpack-cli webpack-dev-server -D</span><br><span class="line"></span><br><span class="line"><span class="comment">// 安装html-webpack-plugin</span></span><br><span class="line">yarn add html-webpack-plugin -D</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建入口文件</span></span><br><span class="line">mkdir src &amp;&amp; touch src/index.js</span><br><span class="line"></span><br><span class="line"><span class="comment">// 打包</span></span><br><span class="line">命令行执行webpack</span><br></pre></td></tr></table></figure>
+<p>就这么简单，无需任何配置，简简单单的webpack就出来了，你可以看到目录下面的dist文件夹就是打包出来的东西。</p>
+<h3 id="简单配置webpack"><a href="#简单配置webpack" class="headerlink" title="简单配置webpack"></a>简单配置webpack</h3><p>然后我们50s搭一个自己清除dist目录、热更新的webpack架子出来</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建模版文件</span></span><br><span class="line">touch index.html</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建配置文件webpack.config.js</span></span><br><span class="line">touch webpack.config.json</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置内容</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>)</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">'./src/index.js'</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        name: <span class="string">'[hash:8].main.js'</span>,</span><br><span class="line">        path: path(__dirname, <span class="string">'dist'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        contentBase: <span class="string">'./dist'</span>,</span><br><span class="line">        hot: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> webpack.HotModuleReplacementPlugin(),</span><br><span class="line">        <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">            filename: <span class="string">'index.html'</span>,</span><br><span class="line">            template: <span class="string">'index.html'</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改package.json</span></span><br><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"start"</span>: <span class="string">"webpack-dev-server --open"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行</span></span><br><span class="line">命令行输入：yarn start</span><br></pre></td></tr></table></figure>
+<p>命令行输入过后就能看见服务运行了，随便修改点index.js里面的内容，发现页面也会随着变化，这就证明我们成功了。</p>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>搭建好的目录结构如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">webpack</span><br><span class="line">    |--src</span><br><span class="line">        |--index.js</span><br><span class="line">    |--index.html</span><br><span class="line">    |--webpack.config.js</span><br><span class="line">    |--package.json</span><br></pre></td></tr></table></figure>
+<p>非常简单，没有任何多余的东西，而这恰恰就是webpack4.30.0最简单的配置方式。</p>
+<h3 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h3><p>1、<a href="https://webpack.docschina.org/guides/" target="_blank" rel="noopener">webpack - 指南</a></p>
 
       
 
@@ -253,15 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -280,18 +238,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/03/06/猴子都能懂的GIT入门/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          猴子都能懂的GIT入门
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/05/浏览器同源政策/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">浏览器同源政策</div>
+    <a href="/2019/04/14/JS数组方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS数组方法</div>
       <i class="icon-circle-right"></i>
     </a>
   

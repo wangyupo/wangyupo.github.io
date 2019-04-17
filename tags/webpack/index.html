@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>AJAX CORS通信 | 阿不思的个人博客</title>
+  <title>Tag: webpack | 阿不思的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CORS通信CORS是一个W3C标准全称是“跨域资源共享”（Cross-origin resource sharing）它允许浏览器向跨源服务器发出XMLHttpRequest请求从而克服了AJAX只能同源使用的限制">
-<meta name="keywords" content="JavaScript,浏览器,AJAX">
-<meta property="og:type" content="article">
-<meta property="og:title" content="AJAX CORS通信">
-<meta property="og:url" content="http://yoursite.com/2018/03/05/AJAX-CORS通信/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="阿不思的个人博客">
+<meta property="og:url" content="http://yoursite.com/tags/webpack/index.html">
 <meta property="og:site_name" content="阿不思的个人博客">
-<meta property="og:description" content="CORS通信CORS是一个W3C标准全称是“跨域资源共享”（Cross-origin resource sharing）它允许浏览器向跨源服务器发出XMLHttpRequest请求从而克服了AJAX只能同源使用的限制">
 <meta property="og:locale" content="cn">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/0069osmDgy1foq839p8f9j309q09q748.jpg">
-<meta property="og:updated_time" content="2018-07-23T06:17:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AJAX CORS通信">
-<meta name="twitter:description" content="CORS通信CORS是一个W3C标准全称是“跨域资源共享”（Cross-origin resource sharing）它允许浏览器向跨源服务器发出XMLHttpRequest请求从而克服了AJAX只能同源使用的限制">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0069osmDgy1foq839p8f9j309q09q748.jpg">
+<meta name="twitter:title" content="阿不思的个人博客">
   
     <link rel="alternative" href="/atom.xml" title="阿不思的个人博客" type="application/atom+xml">
   
@@ -143,188 +136,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AJAX-CORS通信" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      AJAX CORS通信
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/04/17/简简单单搭个webpack/" class="archive-article-date">
+  	<time datetime="2019-04-17T14:16:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/04/17/简简单单搭个webpack/">简简单单搭个webpack</a>
     </h1>
   
 
-        
-        <a href="/2018/03/05/AJAX-CORS通信/" class="archive-article-date">
-  	<time datetime="2018-03-05T09:48:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://ww1.sinaimg.cn/large/0069osmDgy1foq839p8f9j309q09q748.jpg" alt="JS"></p>
-<h1 id="CORS通信"><a href="#CORS通信" class="headerlink" title="CORS通信"></a>CORS通信</h1><p>CORS是一个W3C标准<br>全称是“跨域资源共享”（Cross-origin resource sharing）<br>它允许浏览器向跨源服务器<br>发出XMLHttpRequest请求<br>从而克服了AJAX只能同源使用的限制<br><a id="more"></a></p>
-<h2 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h2><p><strong>CORS 需要 浏览器 和 服务器 同时支持</strong>。目前，<strong>所有浏览器都支持该功能，IE浏览器不能低于IE10</strong> 。</p>
-<p>整个 <strong>CORS</strong> 通信过程，都是 <strong>浏览器自动完成</strong> ，不需要用户参与。对于开发者来说，<strong>CORS通信与同源的AJAX通信没有差别，代码完全一样</strong> 。浏览器一旦发现 <strong>AJAX请求跨源</strong> ，就会自动添加一些 <strong>附加的头信息</strong> ，有时还会多出一次附加的请求，但用户不会有感觉。</p>
-<p>因此，<strong>实现CORS通信的关键是服务器</strong> 。只要服务器实现了CORS接口，就可以跨源通信。</p>
-<h2 id="2、两种请求"><a href="#2、两种请求" class="headerlink" title="2、两种请求"></a>2、两种请求</h2><p>浏览器将 <strong>CORS</strong> 请求分成两类：<strong>简单请求（simple request）</strong>和 <strong>非简单请求（not-so-simple request）</strong>。</p>
-<p>只要 <strong>同时满足</strong> 以下两大条件，就属于 <strong>简单请求</strong> 。</p>
-<p>（1）请求方法是以下三种方法之一。</p>
-<blockquote>
-<ul>
-<li>HEAD</li>
-<li>GET</li>
-<li>POST</li>
-</ul>
-</blockquote>
-<p>（2）HTTP的头信息不超出以下几种字段。</p>
-<blockquote>
-<ul>
-<li>Accept</li>
-<li>Accept-Language</li>
-<li>Content-Language</li>
-<li>Last-Event-ID</li>
-<li>Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
-</ul>
-</blockquote>
-<p>凡是 <strong>不同时满足</strong> 上面两个条件，就属于 <strong>非简单请求</strong> 。</p>
-<p>浏览器对这两种请求的处理，是不一样的。</p>
-<h2 id="3、简单请求"><a href="#3、简单请求" class="headerlink" title="3、简单请求"></a>3、简单请求</h2><h3 id="3-1-基本流程"><a href="#3-1-基本流程" class="headerlink" title="3.1 基本流程"></a>3.1 基本流程</h3><p>对于 <strong>简单请求，浏览器直接发出CORS请求</strong> 。具体来说，就是 <strong>在头信息之中，增加一个 Origin 字段</strong> 。</p>
-<p>下面是一个例子，浏览器发现这次跨源AJAX请求是简单请求，就自动在头信息之中，添加一个Origin字段。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GET /cors HTTP/1.1</span><br><span class="line">Origin: http://api.bob.com</span><br><span class="line">Host: api.alice.com</span><br><span class="line">Accept-Language: en-US</span><br><span class="line">Connection: keep-alive</span><br><span class="line">User-Agent: Mozilla/5.0...</span><br></pre></td></tr></table></figure>
-<p>上面的头信息中，<strong>Origin</strong> 字段用来说明，本次请求来自 <strong>哪个源（协议 + 域名 + 端口）</strong>。服务器根据这个值，决定是否同意这次请求。</p>
-<p>如果 <strong>Origin指定的源</strong> ，不在许可范围内，服务器会返回一个正常的HTTP回应。浏览器发现，这个回应的头信息没有包含Access-Control-Allow-Origin字段（详见下文），就知道出错了，从而抛出一个错误，被XMLHttpRequest的onerror回调函数捕获。注意，<strong>这种错误无法通过状态码识别</strong> ，因为HTTP回应的状态码有可能是200。</p>
-<p>如果 <strong>Origin</strong> 指定的域名在 <strong>许可范围内</strong> ，服务器返回的响应，会 <strong>多出几个头信息字段</strong> 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: http://api.bob.com</span><br><span class="line">Access-Control-Allow-Credentials: true</span><br><span class="line">Access-Control-Expose-Headers: FooBar</span><br><span class="line">Content-Type: text/html; charset=utf-8</span><br></pre></td></tr></table></figure>
-<p>上面的头信息之中，有三个与 <strong>CORS请求相关的字段</strong> ，都 <strong>以 Access-Control- 开头</strong> 。</p>
-<p>（1）Access-Control-Allow-Origin</p>
-<p><strong>该字段是必须的</strong> 。<strong>它的值要么是请求时Origin字段的值，要么是一个*，表示接受任意域名的请求</strong> 。</p>
-<p>（2）Access-Control-Allow-Credentials</p>
-<p><strong>该字段可选</strong> 。它的值是一个布尔值，表示 <strong>是否允许发送Cookie</strong> 。默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为true，如果服务器不要浏览器发送Cookie，删除该字段即可。</p>
-<p>（3）Access-Control-Expose-Headers</p>
-<p><strong>该字段可选</strong> 。CORS请求时，XMLHttpRequest对象的getResponseHeader()方法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。上面的例子指定，getResponseHeader(‘FooBar’)可以返回FooBar字段的值。</p>
-<p>……</p>
-<p>(略)</p>
-<h2 id="2、与JSONP的比较"><a href="#2、与JSONP的比较" class="headerlink" title="2、与JSONP的比较"></a>2、与JSONP的比较</h2><p><strong>CORS</strong> 与 <strong>JSONP</strong> 的使用目的相同，但是比JSONP更强大。</p>
-<p><strong>JSONP只支持GET请求，CORS支持所有类型的HTTP请求</strong> 。JSONP的优势在于支持老式浏览器，以及可以向不支持CORS的网站请求数据。</p>
-<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a>原文链接</h2><p>[1] CORS通信，<a href="http://javascript.ruanyifeng.com/bom/cors.html" target="_blank" rel="noopener">《JavaScript 标准参考教程（alpha）》阮一峰</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://ww1.sinaimg.cn/large/0069osmDly1ftjtm562swj309x09s0t3.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://ww1.sinaimg.cn/large/0069osmDly1ftjtlxqqcyj30fk0ffgmk.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/03/06/猴子都能懂的GIT入门/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          猴子都能懂的GIT入门
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/03/05/浏览器同源政策/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">浏览器同源政策</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -347,9 +212,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
